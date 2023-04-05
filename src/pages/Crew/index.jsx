@@ -1,6 +1,12 @@
+import Tabs from "../../components/Tabs";
+import datas from "../../datas/data.json";
+
 function Crew() {
   return  (
-    <h1>Crew</h1>
+    <section className={'crew-section'}>
+      <h1>Crew</h1>
+      <Tabs crew={datas.crew} name={'crew'}/>
+    </section>
   )
 }
 
