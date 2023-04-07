@@ -20,8 +20,6 @@ function Tabs(props) {
   //   // console.log(index);
   // }
 
-  console.log(datas);
-
   const toggleInit = () => {
     setInitValue(false)
     // console.log(setInitValue);
