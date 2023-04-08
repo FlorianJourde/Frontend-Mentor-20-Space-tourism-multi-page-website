@@ -70,7 +70,7 @@ button:focus-visible {
 :root {
   --ff-primary-font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   --ff-primary: 'Bellefair', 'Arial', sans-serif;
-  --ff-secondary: 'Barlow Condensed', sans-serif;
+  --ff-secondary: 'Barlow Condensed', 'Arial', sans-serif;
   --fs-heading-1: 150px;
   --fs-heading-2: 100px;
   --fs-heading-3: 56px;
@@ -81,6 +81,7 @@ button:focus-visible {
   --clr-very-dark-blue: #0B0D17;
   --clr-light-blue: #D0D6F9;
   --clr-white: #FFFFFF;
+  --clr-very-transparent-white: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -100,12 +101,17 @@ body {
   color: var(--clr-white);
 }
 
+a, input, button {
+  text-decoration: none;
+}
+
 input, button, textarea, select {
   font: inherit;
 }
 
-a, input, button {
-  text-decoration: none;
+a {
+  color: var(--clr-white);
+  //text-decoration: underline;
 }
 
 ul {

@@ -1,57 +1,34 @@
 import {useEffect, useState} from "react";
 import '../../styles/Tabs.scss'
 
-function Tabs(props) {
-  // const [toggleState, setToggleState] = useState(1);
+function CrewTabs(props) {
   const [toggleState, setToggleState] = useState(Object.values(props)[0]);
   const [initValue, setInitValue] = useState(true);
-  // const [datas, setDatas] = useState(props);
-  // const [datas, setDatas] = useState(props);
-  // const [toggleState, setToggleState] = useState([]);
-  // const elements = props;
   const datas = Object.values(props)[0];
-
-  // console.log(props);
-  // console.log(Object.values(props)[0]);
-  // console.log();
-
-  // function toggleTab(index) {
-  //   setToggleState(index);
-  //   // console.log(index);
-  // }
 
   const toggleInit = () => {
     setInitValue(false)
-    // console.log(setInitValue);
   }
 
   const toggleTab = (index) => {
     setToggleState(index)
-    // console.log(index);
   }
 
-  // useEffect(() => {
-  //   // Met à jour le titre du document via l’API du navigateur
-  //   toggleState = 1;
-  // });
+  const [matches, setMatches] = useState(
+    window.matchMedia("(min-width: 768px)").matches
+  )
+
+  useEffect(() => {
+    window
+      .matchMedia("(min-width: 768px)")
+      .addEventListener('change', e => setMatches( e.matches ));
+  }, []);
 
   return (
     <div className={'tabs-container'}>
       <h2>Tabs</h2>
 
-      {/*{initValue === true ? (*/}
-      {/*  <p>Hello</p>*/}
-      {/*) : (*/}
-      {/*  <p>Goodbye</p>*/}
-      {/*)}*/}
-
       {datas.map((key, index) =>
-        // <button
-        //   key={`tab-${index}`}
-        //   className={index === 0 ? "tabs active" : "tabs"}
-        //   onClick={() => toggleTab(index)}
-        // >
-
         <button
           key={`tab-${index}`}
           className={
@@ -63,32 +40,53 @@ function Tabs(props) {
           }
           }
         >
-          Tab {index}
+          {index}
         </button>
       )}
 
-      {datas.map(({name, images, description}, index) =>
-        initValue === true && index === 0 ? (
+      {datas.map(({name, images, description, role, bio, distance, travel}, index) =>
           <div
             key={name}
-            className={"content active"}
+            className=
+              {(initValue === true && index === 0) || (toggleState === index) ? "content active" : "content" }
           >
-            <p>{name}</p>
-            <p>{description}</p>
-            <p>{index}</p>
+            {name ?? <p>{name}</p>}
+            {images.png && <img src={images.png} alt=""/>}
+            {(matches && (images.portrait || images.landscape)) && (<img src={images.landscape} alt=""/>)}
+            {!matches && (<img src={images.portrait} alt=""/>)}
+            {images.description && <p>{description}</p>}
+            {description && <p>{description}</p>}
+            {distance && <p>{distance}</p>}
+            {travel && <p>{travel}</p>}
+            {role && <p>{role}</p>}
+            {bio && <p>{bio}</p>}
           </div>
-        ) : (
-          <div
-            key={name}
-            className={toggleState === index ? "content active" : "content"}
-          >
-            <p>{name}</p>
-            <p>{description}</p>
-            <p>{index}</p>
-          </div>
-        ))}
+        )}
     </div>
   )
+
+/*{datas.map(({name, images, description}, index) =>
+  initValue === true && index === 0 ? (
+   <div
+     key={name}
+     className={"content active"}
+   >
+     <p>{name}</p>
+     {images.png ? <img src={images.png} alt=""/> : null}
+     <p>{description}</p>
+     <p>{index}</p>
+   </div>
+  ) : (
+   <div
+     key={name}
+     className={toggleState === index ? "content active" : "content"}
+   >
+     <p>{name}</p>
+     {images.png ? <img src={images.png} alt=""/> : null}
+     {description ? <p>{description}</p> : ''}
+     <p>{index}</p>
+   </div>
+))}*/
 
   /*return (
     <div className={'tabs-container'}>
@@ -157,4 +155,4 @@ function Tabs(props) {
   )*/
 }
 
-export default Tabs;
+export default CrewTabs;

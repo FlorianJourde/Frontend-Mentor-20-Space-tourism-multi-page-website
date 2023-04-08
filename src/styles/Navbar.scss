@@ -1,0 +1,27 @@
+.main-navbar {
+  display: inline-flex;
+  gap: 40px;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 15px 0;
+
+  .navbar-logo {
+    //padding: 15px 30px;
+    padding-left: 30px;
+    img {
+      width: auto;
+      height: 30px;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--clr-very-transparent-white);
+    padding: 15px 30px;
+    gap: 20px;
+    height: 100%;
+  }
+}

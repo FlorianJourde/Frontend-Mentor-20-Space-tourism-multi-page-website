@@ -5,7 +5,6 @@ function Destination() {
   return  (
     <section className={'destination-section'}>
       <h1>Destination</h1>
-      {/*<Tabs destination={datas.destinations} name={'destination'}/>*/}
       <Tabs destination={datas.destinations} name={'destination'}/>
     </section>
   )
