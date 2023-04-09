@@ -7,8 +7,10 @@ function Crew() {
 
   return  (
     <section className={'crew-section'}>
-      <h1>Crew</h1>
-      <Tabs crew={datas.crew} name={'crew'}/>
+      <div className={'wrapper'}>
+        <h1>Crew</h1>
+        <Tabs crew={datas.crew} name={'crew'}/>
+      </div>
     </section>
   )
 }

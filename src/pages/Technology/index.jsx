@@ -7,8 +7,10 @@ function Technology() {
 
   return  (
     <section className={'technology-section'}>
-      <h1>Technology</h1>
-      <Tabs technology={datas.technology} name={'technology'}/>
+      <div className={'wrapper'}>
+        <h1>Technology</h1>
+        <Tabs technology={datas.technology} name={'technology'}/>
+      </div>
     </section>
   )
 }

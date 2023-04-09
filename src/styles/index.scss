@@ -79,6 +79,7 @@ button:focus-visible {
   --fs-subheading-2: 14px;
   --fs-body: 16px;
   --clr-very-dark-blue: #0B0D17;
+  --clr-very-dark-blue-transparent: rgb(11 13 23 / 90%);
   --clr-light-blue: #D0D6F9;
   --clr-white: #FFFFFF;
   --clr-very-transparent-white: rgba(255, 255, 255, 0.1);
@@ -101,20 +102,27 @@ body {
   font-family: var(--ff-primary-font-family);
   color: var(--clr-white);
   min-height: 100vh;
-  min-width: 100vw;
+  //min-width: 100vw;
   background-size: cover;
   background-image: var(--img-background-image);
+  overflow-x: hidden;
 }
 
 a, input, button {
   text-decoration: none;
 }
 
+button {
+  border: none;
+  background-color: unset;
+  cursor: pointer;
+}
+
 input, button, textarea, select {
   font: inherit;
 }
 
-a {
+a, button {
   color: var(--clr-white);
   //text-decoration: underline;
 }
@@ -142,4 +150,8 @@ ul {
 
 .wrapper-small {
   max-width: 900px;
+}
+
+img {
+  max-width: 100%;
 }

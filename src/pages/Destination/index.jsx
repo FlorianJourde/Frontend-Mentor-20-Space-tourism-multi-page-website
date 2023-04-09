@@ -7,8 +7,10 @@ function Destination() {
 
   return  (
     <section className={'destination-section'}>
-      <h1>Destination</h1>
-      <Tabs destination={datas.destinations} name={'destination'}/>
+      <div className={'wrapper'}>
+        <h1>Destination</h1>
+        <Tabs destination={datas.destinations} name={'destination'}/>
+      </div>
     </section>
   )
 }
