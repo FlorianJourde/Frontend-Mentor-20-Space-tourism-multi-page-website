@@ -82,6 +82,7 @@ button:focus-visible {
   --clr-light-blue: #D0D6F9;
   --clr-white: #FFFFFF;
   --clr-very-transparent-white: rgba(255, 255, 255, 0.1);
+  --img-background-image: url('../assets/home/background-home-desktop.jpg');
 }
 
 * {
@@ -99,6 +100,10 @@ body {
   background-color: var(--clr-very-dark-blue);
   font-family: var(--ff-primary-font-family);
   color: var(--clr-white);
+  min-height: 100vh;
+  min-width: 100vw;
+  background-size: cover;
+  background-image: var(--img-background-image);
 }
 
 a, input, button {

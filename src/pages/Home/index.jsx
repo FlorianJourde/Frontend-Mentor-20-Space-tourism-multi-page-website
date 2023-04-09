@@ -1,7 +1,10 @@
 import {Link} from "react-router-dom";
 import "../../styles/Home.scss"
+import setBackground from "../../utils/setBackground";
 
 function Home() {
+  setBackground( 'home');
+
   return  (
     <section className="home-section">
       <h2>So you want to travel to</h2>

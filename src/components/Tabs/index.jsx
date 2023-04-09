@@ -35,9 +35,9 @@ function CrewTabs(props) {
             toggleState === index ? "tabs active" : "tabs"
           }
           onClick={() => {
-            toggleTab(index);
-            toggleInit();
-          }
+              toggleTab(index);
+              toggleInit();
+            }
           }
         >
           {index}
