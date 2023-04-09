@@ -1,6 +1,7 @@
 import Tabs from "../../components/Tabs";
 import datas from "../../datas/data.json";
 import setBackground from "../../utils/setBackground";
+import '../../styles/Crew.scss'
 
 function Crew() {
   setBackground('crew');
@@ -8,7 +9,7 @@ function Crew() {
   return  (
     <section className={'crew-section'}>
       <div className={'wrapper'}>
-        <h1>Crew</h1>
+        <h1><span className={'number'}>02</span> Meet your crew</h1>
         <Tabs crew={datas.crew} name={'crew'}/>
       </div>
     </section>

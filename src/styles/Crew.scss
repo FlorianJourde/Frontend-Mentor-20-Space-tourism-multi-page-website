@@ -1,0 +1,64 @@
+.crew-section {
+  text-align: center;
+
+  h1 {
+    font-size: var(--fs-heading-4);
+    font-family: var(--ff-secondary);
+    letter-spacing: .2em;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  .tabs-container .content {
+    .image-container {
+      order: 1;
+      border-bottom: 1px solid var(--clr-very-transparent-white);
+      display: flex;
+      justify-content: center;
+      //width: 250px;
+      //height: auto;
+
+      img {
+        height: 250px;
+        width: auto;
+      }
+    }
+
+    .steps {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      order: 2;
+
+      .tabs {
+        color: var(--clr-transparent-white);
+
+        &.active {
+          color: var(--clr-white);
+        }
+      }
+    }
+
+    .role {
+      order: 3;
+      font-family: var(--ff-secondary);
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--clr-transparent-white);
+      font-size: var(--fs-heading-4);
+    }
+
+    .name {
+      order: 4;
+      font-family: var(--ff-secondary);
+      font-size: var(--fs-heading-3);
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .bio {
+      order: 5;
+      color: var(--clr-light-blue);
+    }
+  }
+}

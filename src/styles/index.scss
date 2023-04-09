@@ -68,9 +68,9 @@ button:focus-visible {
 }*/
 
 :root {
-  --ff-primary-font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --ff-primary: 'Bellefair', 'Arial', sans-serif;
-  --ff-secondary: 'Barlow Condensed', 'Arial', sans-serif;
+  --ff-primary: 'Calibri', sans-serif;
+  --ff-tertiary: 'Bellefair', 'Helvetica', 'Arial', sans-serif;
+  --ff-secondary: 'Barlow Condensed', 'Helvetica', 'Arial', sans-serif;
   --fs-heading-1: 150px;
   --fs-heading-2: 100px;
   --fs-heading-3: 56px;
@@ -83,7 +83,20 @@ button:focus-visible {
   --clr-light-blue: #D0D6F9;
   --clr-white: #FFFFFF;
   --clr-very-transparent-white: rgba(255, 255, 255, 0.1);
+  --clr-transparent-white: #D0D6F980;
   --img-background-image: url('../assets/home/background-home-desktop.jpg');
+  --tr-primary: .6s cubic-bezier(.47, 1.64, .41,.8);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --fs-heading-1: 100px;
+    --fs-heading-2: 60px;
+    --fs-heading-3: 42px;
+    --fs-heading-4: 26px;
+    --fs-subheading-5: 20px;
+    --fs-subheading-2: 12px;
+  }
 }
 
 * {
@@ -99,13 +112,14 @@ html {
 body {
   transition: background-color .4s;
   background-color: var(--clr-very-dark-blue);
-  font-family: var(--ff-primary-font-family);
+  font-size: var(--fs-body);
   color: var(--clr-white);
+  font-family: var(--ff-primary);
   min-height: 100vh;
-  //min-width: 100vw;
   background-size: cover;
   background-image: var(--img-background-image);
   overflow-x: hidden;
+  padding-bottom: 100px;
 }
 
 a, input, button {
@@ -122,6 +136,12 @@ input, button, textarea, select {
   font: inherit;
 }
 
+h1, h2, h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1em;
+}
+
 a, button {
   color: var(--clr-white);
   //text-decoration: underline;
@@ -129,6 +149,10 @@ a, button {
 
 ul {
   list-style-type: none;
+}
+
+.number {
+  color: var(--clr-transparent-white);
 }
 
 .wrapper {
@@ -154,4 +178,28 @@ ul {
 
 img {
   max-width: 100%;
+}
+
+.padding-top-large {
+  padding-top: 150px;
+}
+
+.padding-top-medium {
+  padding-top: 100px;
+}
+
+.padding-top-small {
+  padding-top: 20px;
+}
+
+.padding-bottom-large {
+  padding-bottom: 120px;
+}
+
+.padding-bottom-medium {
+  padding-bottom: 80px;
+}
+
+.padding-bottom-small {
+  padding-bottom: 20px;
 }

@@ -6,7 +6,7 @@ function Home() {
   setBackground( 'home');
 
   return  (
-    <section className={'home-section'}>
+    <section className={'home-section padding-top-medium'}>
       <div className={'wrapper'}>
         <h2>So you want to travel to</h2>
         <h1>Space</h1>

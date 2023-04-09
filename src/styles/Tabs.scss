@@ -5,3 +5,9 @@
 .content.active {
   display: block;
 }
+
+.tabs-container .content.active {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
