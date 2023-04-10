@@ -5,7 +5,6 @@
     font-size: var(--fs-heading-4);
     font-family: var(--ff-secondary);
     letter-spacing: .2em;
-    //margin-top: 20px;
     margin-bottom: 50px;
   }
 
@@ -65,7 +64,7 @@
 @media (min-width: 769px) {
   .crew-section {
     &.padding-bottom-medium {
-    padding-bottom: 0;
+      padding-bottom: 0;
     }
 
     .tabs-container .content {
@@ -121,11 +120,6 @@
       .image-container {
         grid-area: a;
         align-self: center;
-
-        img {
-          //height: 500px;
-          //object-position: bottom;
-        }
       }
 
       .role {
