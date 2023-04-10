@@ -71,12 +71,12 @@ button:focus-visible {
   --ff-primary: 'Calibri', sans-serif;
   --ff-tertiary: 'Bellefair', 'Helvetica', 'Arial', sans-serif;
   --ff-secondary: 'Barlow Condensed', 'Helvetica', 'Arial', sans-serif;
-  --fs-heading-1: 150px;
-  --fs-heading-2: 100px;
-  --fs-heading-3: 56px;
-  --fs-heading-4: 32px;
-  --fs-subheading-5: 28px;
-  --fs-subheading-2: 14px;
+  --fs-heading-1: 100px;
+  --fs-heading-2: 60px;
+  --fs-heading-3: 42px;
+  --fs-heading-4: 26px;
+  --fs-subheading-1: 20px;
+  --fs-subheading-2: 12px;
   --fs-body: 16px;
   --clr-very-dark-blue: #0B0D17;
   --clr-very-dark-blue-transparent: rgb(11 13 23 / 90%);
@@ -88,14 +88,14 @@ button:focus-visible {
   --tr-primary: .6s cubic-bezier(.47, 1.64, .41, .8);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 769px) {
   :root {
-    --fs-heading-1: 100px;
-    --fs-heading-2: 60px;
-    --fs-heading-3: 42px;
-    --fs-heading-4: 26px;
-    --fs-subheading-5: 20px;
-    --fs-subheading-2: 12px;
+    --fs-heading-1: 150px;
+    --fs-heading-2: 100px;
+    --fs-heading-3: 50px;
+    --fs-heading-4: 30px;
+    --fs-subheading-5: 28px;
+    --fs-subheading-2: 14px;
   }
 }
 
@@ -119,7 +119,7 @@ body {
   background-size: cover;
   background-image: var(--img-background-image);
   overflow-x: hidden;
-  padding-bottom: 100px;
+  //padding-bottom: 50px;
 }
 
 a, input, button {
@@ -159,7 +159,7 @@ ul {
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
-  max-width: 1400px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -170,6 +170,7 @@ ul {
   flex-wrap: inherit;
   gap: inherit;
   z-index: inherit;
+  grid: inherit;
 }
 
 .wrapper-small {
@@ -178,18 +179,19 @@ ul {
 
 img {
   max-width: 100%;
+  object-fit: contain;
 }
 
 .padding-top-large {
-  padding-top: 150px;
+  padding-top: 120px;
 }
 
 .padding-top-medium {
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 .padding-top-small {
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 .padding-bottom-large {
@@ -201,5 +203,42 @@ img {
 }
 
 .padding-bottom-small {
-  padding-bottom: 20px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 769px) {
+  .wrapper {
+    //max-width: 600px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    max-width: 1200px;
+  }
+
+
+  .padding-top-large {
+    padding-top: 150px;
+  }
+
+  .padding-top-medium {
+    padding-top: 100px;
+  }
+
+  .padding-top-small {
+    padding-top: 20px;
+  }
+
+  .padding-bottom-large {
+    padding-bottom: 150px;
+  }
+
+  .padding-bottom-medium {
+    padding-bottom: 100px;
+  }
+
+  .padding-bottom-small {
+    padding-bottom: 20px;
+  }
 }

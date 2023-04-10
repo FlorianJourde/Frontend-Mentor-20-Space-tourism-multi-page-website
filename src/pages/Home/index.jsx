@@ -6,16 +6,18 @@ function Home() {
   setBackground( 'home');
 
   return  (
-    <section className={'home-section padding-top-medium'}>
+    <section className={'home-section padding-top-medium padding-bottom-medium'}>
       <div className={'wrapper'}>
-        <h2>So you want to travel to</h2>
-        <h1>Space</h1>
-        <p>Let’s face it; if you want to go to space, you might as well genuinely go to
-          outer space and not hover kind of on the edge of it. Well sit back, and relax
-          because we’ll give you a truly out of this world experience!</p>
-        <Link to="/destination">
-          Explore
-        </Link>
+        <div className={'introduction'}>
+          <h2>So you want to travel to</h2>
+          <h1>Space</h1>
+          <p>Let’s face it; if you want to go to space, you might as well genuinely go to
+            outer space and not hover kind of on the edge of it. Well sit back, and relax
+            because we’ll give you a truly out of this world experience!</p>
+          <Link to="/destination">
+            Explore
+          </Link>
+        </div>
       </div>
     </section>
   )

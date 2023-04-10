@@ -7,7 +7,7 @@ function Destination() {
   setBackground( 'destination');
 
   return  (
-    <section className={'destination-section'}>
+    <section className={'destination-section padding-top-medium padding-bottom-medium'}>
       <div className={'wrapper'}>
         <h1><span className={'number'}>01</span> Pick your destination</h1>
         <Tabs destination={datas.destinations} name={'destination'}/>

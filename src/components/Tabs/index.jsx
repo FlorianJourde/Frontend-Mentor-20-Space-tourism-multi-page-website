@@ -16,12 +16,12 @@ function Tabs(props) {
   }
 
   const [matches, setMatches] = useState(
-    window.matchMedia("(min-width: 768px)").matches
+    window.matchMedia("(min-width: 1024px)").matches
   )
 
   useEffect(() => {
     window
-      .matchMedia("(min-width: 768px)")
+      .matchMedia("(min-width: 1024px)")
       .addEventListener('change', e => setMatches(e.matches));
   }, []);
 
@@ -57,8 +57,8 @@ function Tabs(props) {
             )}
           </div>
 
-          {(matches && (images.portrait || images.landscape)) && (<img src={images.landscape} alt=""/>)}
-          {(!matches && (images.portrait || images.landscape)) && (<img src={images.portrait} alt=""/>)}
+          {(matches && (images.portrait || images.landscape)) && (<img src={images.portrait} alt=""/>)}
+          {(!matches && (images.portrait || images.landscape)) && (<img src={images.landscape} alt=""/>)}
           {images.description && <p className={'image-description'}>{description}</p>}
           {description && <p className={'description'}>{description}</p>}
           {role && <p className={'role'}>{role}</p>}

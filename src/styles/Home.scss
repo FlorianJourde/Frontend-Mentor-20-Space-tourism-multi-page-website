@@ -1,45 +1,89 @@
 .home-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-
-  h2 {
-    font-family: var(--ff-secondary);
-    font-size: var(--fs-heading-5);
-    letter-spacing: .2em;
-    color: var(--clr-light-blue);
-  }
-
-  h1 {
-    font-family: var(--ff-tertiary);
-    font-size: var(--fs-heading-1);
-  }
-
-  p {
-    color: var(--clr-light-blue);
-    text-align: center;
-  }
-
-  a {
-    text-transform: uppercase;
-    font-weight: 600;
-    font-family: var(--ff-secondary);
-    letter-spacing: .2em;
+  .introduction {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background-color: var(--clr-white);
-    padding: 40px;
-    border-radius: 50%;
-    aspect-ratio: 1 / 1;
-    color: var(--clr-very-dark-blue);
-    transition: var(--tr-primary);
-    margin-top: 60px;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
 
-    &:hover {
-      box-shadow: 0 0 0 60px var(--clr-very-transparent-white);
+    h2 {
+      font-family: var(--ff-secondary);
+      font-size: var(--fs-heading-4);
+      letter-spacing: .2em;
+      color: var(--clr-light-blue);
+    }
+
+    h1 {
+      font-family: var(--ff-tertiary);
+      font-size: var(--fs-heading-1);
+    }
+
+    p {
+      color: var(--clr-light-blue);
+    }
+
+    a {
+      text-transform: uppercase;
+      //font-size: var(--fs-heading-4);
+      font-weight: 600;
+      font-family: var(--ff-secondary);
+      letter-spacing: .2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--clr-white);
+      padding: 40px;
+      border-radius: 50%;
+      aspect-ratio: 1 / 1;
+      color: var(--clr-very-dark-blue);
+      transition: var(--tr-primary);
+      margin-top: 60px;
+
+      &:hover {
+        box-shadow: 0 0 0 60px var(--clr-very-transparent-white);
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-section {
+    &.padding-bottom-medium {
+      padding-bottom: 250px;
+    }
+
+    &.padding-top-medium {
+      padding-top: 250px;
+    }
+
+    .introduction {
+      text-align: left;
+      display: grid;
+      grid-template-areas:
+      "a d"
+      "b d"
+      "c d";
+      //grid-template-rows: 1fr;
+      grid-template-columns: 1fr 300px;
+      gap: 20px 200px;
+
+      h2 {
+        grid-area: a;
+      }
+
+      h1 {
+        grid-area: b;
+      }
+
+      p {
+        grid-area: c;
+      }
+
+      a {
+        grid-area: d;
+        margin-top: unset;
+      }
     }
   }
 }

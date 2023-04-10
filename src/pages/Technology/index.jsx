@@ -7,7 +7,7 @@ function Technology() {
   setBackground('technology');
 
   return  (
-    <section className={'technology-section'}>
+    <section className={'technology-section padding-top-medium  padding-bottom-medium'}>
       <div className={'wrapper'}>
         <h1><span className={'number'}>03</span> Space lauche 101</h1>
         <Tabs technology={datas.technology} name={'technology'}/>
