@@ -40,9 +40,9 @@ function Tabs(props) {
           <div className={'steps'}>
             {datas.map(({key, name}, index) =>
               <button
-                key={`tab-${index}`}
+                key={`step-${index}`}
                 className={
-                  (initValue === true && index === 0) || (toggleState === index) ? "tabs active" : "tabs"
+                  (initValue === true && index === 0) || (toggleState === index) ? "step active" : "step"
                 }
                 onClick={() => {
                   toggleTab(index);
@@ -62,27 +62,27 @@ function Tabs(props) {
           {images.description && <p className={'image-description'}>{description}</p>}
           {description && <p className={'description'}>{description}</p>}
           {role && <p className={'role'}>{role}</p>}
-          {name && <p className={'name'}>{name}</p>}
+          {page === 'technology' && <p className={'terminology'}>The terminology...</p>}
+          {name && <h2 className={'name'}>{name}</h2>}
           {bio && <p className={'bio'}>{bio}</p>}
+
           {(distance || travel) && (
             <div className={'specs'}>
-
               {distance &&
                 <div className={'spec distance'}>
                   <p className={'label'}>Avg. distance</p>
                   <p>{distance}</p>
                 </div>
               }
-
               {travel &&
                 <div className={'spec travel'}>
                   <p className={'label'}>Est. travel time</p>
                   <p>{travel}</p>
                 </div>
               }
-
             </div>
           )}
+
         </div>
       )}
     </div>

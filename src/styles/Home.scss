@@ -31,15 +31,15 @@
     justify-content: center;
     align-items: center;
     background-color: var(--clr-white);
-    padding: 20px;
+    padding: 40px;
     border-radius: 50%;
     aspect-ratio: 1 / 1;
     color: var(--clr-very-dark-blue);
     transition: var(--tr-primary);
-    margin-top: 40px;
+    margin-top: 60px;
 
     &:hover {
-      box-shadow: 0 0 0 20px var(--clr-very-transparent-white);
+      box-shadow: 0 0 0 60px var(--clr-very-transparent-white);
     }
   }
 }

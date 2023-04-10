@@ -9,5 +9,14 @@
 .tabs-container .content.active {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+
+  h1, h2, h3 {
+    font-weight: 500;
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-heading-3);
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    text-align: center;
+  }
 }

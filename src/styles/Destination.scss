@@ -1,5 +1,5 @@
 .destination-section {
-  //text-align: center;
+  text-align: center;
 
   h1 {
     font-size: var(--fs-heading-4);
@@ -14,8 +14,6 @@
       order: 1;
       display: flex;
       justify-content: center;
-      //width: 250px;
-      //height: auto;
 
       img {
         height: 250px;
@@ -31,48 +29,60 @@
     order: 2;
     font-size: var(--fs-heading-5);
 
-    .tabs {
+    .step {
       color: var(--clr-transparent-white);
       font-family: var(--ff-secondary);
       text-transform: uppercase;
       letter-spacing: .2em;
+      transition: var(--tr-primary);
+      position: relative;
 
-      &.active {
+      &:hover, &.active {
         color: var(--clr-white);
+      }
+
+
+      &:hover::after, &.active::after {
+        width: 100%;
+      }
+
+      &::after {
+        content: "";
+        height: 1px;
+        bottom: -10px;
+        left: 0;
+        width: 0;
+        position: absolute;
+        background-color: var(--clr-white);
+        transition: var(--tr-primary);
       }
     }
   }
 
   .name {
     order: 3;
-    font-family: var(--ff-secondary);
-    font-size: var(--fs-heading-3);
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    text-align: center;
   }
 
   .description {
     order: 4;
     color: var(--clr-light-blue);
-    text-align: center;
   }
 
   .specs {
     order: 5;
     display: flex;
     justify-content: center;
-    gap: 40px;
+    flex-direction: column;
+    gap: 30px 50px;
     border-top: 1px solid var(--clr-very-transparent-white);
-    padding: 20px;
-    text-align: center;
+    padding: 30px;
     font-family: var(--ff-secondary);
     text-transform: uppercase;
     font-size: var(--fs-heading-5);
     letter-spacing: .2em;
 
     .label {
-      color: var(--clr-transparent-white);
+      color: var(--clr-light-blue);
     }
   }
 }

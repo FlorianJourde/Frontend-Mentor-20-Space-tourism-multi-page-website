@@ -1,6 +1,7 @@
 import Tabs from "../../components/Tabs";
 import datas from "../../datas/data.json";
 import setBackground from "../../utils/setBackground";
+import "../../styles/Technology.scss"
 
 function Technology() {
   setBackground('technology');
@@ -8,7 +9,7 @@ function Technology() {
   return  (
     <section className={'technology-section'}>
       <div className={'wrapper'}>
-        <h1>Technology</h1>
+        <h1><span className={'number'}>03</span> Space lauche 101</h1>
         <Tabs technology={datas.technology} name={'technology'}/>
       </div>
     </section>

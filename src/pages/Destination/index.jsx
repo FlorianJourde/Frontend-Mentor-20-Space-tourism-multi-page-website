@@ -9,7 +9,7 @@ function Destination() {
   return  (
     <section className={'destination-section'}>
       <div className={'wrapper'}>
-        <h1><span className={'number'}>01</span>Destination</h1>
+        <h1><span className={'number'}>01</span> Pick your destination</h1>
         <Tabs destination={datas.destinations} name={'destination'}/>
       </div>
     </section>

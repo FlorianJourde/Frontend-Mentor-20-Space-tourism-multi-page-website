@@ -1,4 +1,4 @@
-.crew-section {
+.technology-section {
   text-align: center;
 
   h1 {
@@ -10,53 +10,54 @@
   }
 
   .tabs-container .content {
-    .image-container {
+    img {
       order: 1;
-      border-bottom: 1px solid var(--clr-very-transparent-white);
       display: flex;
       justify-content: center;
-
-      img {
-        height: 250px;
-        width: auto;
-      }
+      height: auto;
+      width: 100%;
+      object-fit: contain;
     }
 
     .steps {
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 20px;
       order: 2;
-      font-size: var(--fs-heading-4);
 
       .step {
-        color: var(--clr-very-transparent-white);
+        color: var(--clr-white);
+        border: 1px solid var(--clr-very-transparent-white);
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        min-width: 50px;
+        align-items: center;
         transition: var(--tr-primary);
+        padding: 10px;
 
-        &:hover {
-          color: var(--clr-transparent-white);
-        }
-
-        &.active {
-          color: var(--clr-white);
+        &.active, &:hover {
+          color: var(--clr-very-dark-blue);
+          background-color: var(--clr-white);
         }
       }
     }
 
-    .role {
+    .terminology {
       order: 3;
+      color: var(--clr-transparent-white);
       font-family: var(--ff-secondary);
+      font-size: var(--fs-heading-4);
       letter-spacing: .2em;
       text-transform: uppercase;
-      color: var(--clr-transparent-white);
-      font-size: var(--fs-heading-4);
     }
 
     .name {
       order: 4;
     }
 
-    .bio {
+    .description {
       order: 5;
       color: var(--clr-light-blue);
     }
