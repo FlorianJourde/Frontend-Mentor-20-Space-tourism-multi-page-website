@@ -30,6 +30,7 @@
       .step {
         color: var(--clr-very-transparent-white);
         transition: var(--tr-primary);
+        font-size: var(--fs-subheading-1);
 
         &:hover {
           color: var(--clr-transparent-white);
@@ -119,7 +120,7 @@
 
       .image-container {
         grid-area: a;
-        align-self: center;
+        align-self: end;
       }
 
       .role {

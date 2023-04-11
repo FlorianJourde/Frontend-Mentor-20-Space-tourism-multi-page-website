@@ -1,4 +1,7 @@
 .home-section {
+  display: flex;
+  flex-grow: 1;
+
   .introduction {
     display: flex;
     flex-direction: column;
@@ -48,14 +51,6 @@
 
 @media (min-width: 1024px) {
   .home-section {
-    &.padding-bottom-medium {
-      padding-bottom: 250px;
-    }
-
-    &.padding-top-medium {
-      padding-top: 250px;
-    }
-
     .introduction {
       text-align: left;
       display: grid;
@@ -64,10 +59,12 @@
       "b d"
       "c d";
       grid-template-columns: 1fr 300px;
-      gap: 20px 200px;
+      grid-template-rows: repeat(3, 1fr);
+      gap: 50px 200px;
 
       h2 {
         grid-area: a;
+        align-self: end;
       }
 
       h1 {
@@ -76,6 +73,7 @@
 
       p {
         grid-area: c;
+        align-self: start;
       }
 
       a {

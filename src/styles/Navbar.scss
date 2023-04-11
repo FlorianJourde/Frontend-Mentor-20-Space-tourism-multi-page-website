@@ -21,8 +21,8 @@
   }
 
   .navbar-logo {
-    flex-grow: 1;
     margin-left: 20px;
+    margin-right: 20px;
 
     img {
       width: auto;
@@ -142,7 +142,7 @@
         content: "";
         height: 1px;
         background-color: var(--clr-very-transparent-white);
-        width: calc(100vw - (750px));
+        width: calc(100vw - (850px));
         left: 0;
         top: 50%;
         transform: translate(calc(-100% + 20px), -50%);

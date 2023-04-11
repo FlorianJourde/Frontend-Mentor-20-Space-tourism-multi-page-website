@@ -5,7 +5,7 @@
   --fs-heading-1: 100px;
   --fs-heading-2: 60px;
   --fs-heading-3: 42px;
-  --fs-heading-4: 26px;
+  --fs-heading-4: 22px;
   --fs-subheading-1: 20px;
   --fs-subheading-2: 12px;
   --fs-body: 16px;
@@ -78,6 +78,12 @@ a, button {
 
 ul {
   list-style-type: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .number {
