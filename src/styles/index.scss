@@ -13,7 +13,7 @@
   --clr-very-dark-blue-transparent: rgb(11 13 23 / 90%);
   --clr-light-blue: #D0D6F9;
   --clr-white: #FFFFFF;
-  --clr-very-transparent-white: rgba(255, 255, 255, 0.1);
+  --clr-very-transparent-white: rgba(255, 255, 255, 0.05);
   --clr-transparent-white: #D0D6F980;
   --img-background-image: url('../assets/home/background-home-desktop.jpg');
   --tr-primary: .6s cubic-bezier(.47, 1.64, .41, .8);
@@ -22,10 +22,10 @@
 @media (min-width: 769px) {
   :root {
     --fs-heading-1: 150px;
-    --fs-heading-2: 100px;
-    --fs-heading-3: 50px;
-    --fs-heading-4: 30px;
-    --fs-subheading-5: 28px;
+    --fs-heading-2: 60px;
+    --fs-heading-3: 40px;
+    --fs-heading-4: 25px;
+    --fs-subheading-5: 20px;
     --fs-subheading-2: 14px;
   }
 }

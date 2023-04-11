@@ -31,7 +31,8 @@
   }
 
   .navigation {
-    background-color: var(--clr-very-dark-blue);
+    background-color: rgb(11 13 23 / 40%);
+    backdrop-filter: blur(50px);
     right: 0;
     transform: translateX(100%);
     top: 0;
@@ -39,6 +40,7 @@
     height: 100vh;
     transition: .6s ease;
     z-index: 1;
+    width: 50vw;
 
     ul {
       display: flex;
@@ -64,7 +66,7 @@
 
     &.active {
       transform: translateX(0%);
-      box-shadow: -10px 0px 100px rgb(0 0 0 / 50%);
+      box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
     }
   }
 }
@@ -79,11 +81,13 @@
 
     .navigation {
       background-color: var(--clr-very-transparent-white);
+      backdrop-filter: blur(50px);
       z-index: 1;
       flex-direction: row;
       transform: unset;
       height: unset;
       position: relative;
+      width: unset;
 
       ul {
         flex-direction: unset;
@@ -141,7 +145,7 @@
       &::before {
         content: "";
         height: 1px;
-        background-color: var(--clr-very-transparent-white);
+        background-color: var(--clr-transparent-white);
         width: calc(100vw - (850px));
         left: 0;
         top: 50%;

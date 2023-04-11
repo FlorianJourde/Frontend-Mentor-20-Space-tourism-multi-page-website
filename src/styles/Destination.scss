@@ -71,9 +71,8 @@
     order: 5;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     gap: 30px 50px;
-    border-top: 1px solid var(--clr-very-transparent-white);
+    border-top: 1px solid var(--clr-transparent-white);
     padding: 30px;
     font-family: var(--ff-secondary);
     text-transform: uppercase;
@@ -81,15 +80,13 @@
     letter-spacing: .2em;
 
     .label {
-      color: var(--clr-light-blue);
+      color: var(--clr-transparent-white);
     }
-  }
-}
 
-@media (min-width: 769px) {
-  .destination-section {
-    .specs {
-      flex-direction: row;
+    & p:last-child {
+      font-family: var(--ff-tertiary);
+      font-size: var(--fs-heading-4);
+      margin-top: 10px;
     }
   }
 }
@@ -110,6 +107,7 @@
         "a e";
       gap: 20px 100px;
       grid-template-rows: auto auto auto 1fr;
+      grid-template-columns: 400px 1fr;
 
       .image-container {
         grid-area: a;

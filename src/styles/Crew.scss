@@ -11,7 +11,7 @@
   .tabs-container .content {
     .image-container {
       order: 1;
-      border-bottom: 1px solid var(--clr-very-transparent-white);
+      border-bottom: 1px solid var(--clr-transparent-white);
       display: flex;
       justify-content: center;
 
@@ -28,15 +28,11 @@
       order: 2;
 
       .step {
-        color: var(--clr-very-transparent-white);
+        color: var(--clr-transparent-white);
         transition: var(--tr-primary);
         font-size: var(--fs-subheading-1);
 
-        &:hover {
-          color: var(--clr-transparent-white);
-        }
-
-        &.active {
+        &.active, &:hover {
           color: var(--clr-white);
         }
       }
@@ -76,7 +72,7 @@
         border-bottom: unset;
 
         img {
-          height: 500px;
+          height: 600px;
         }
       }
 
@@ -115,8 +111,8 @@
         "e a"
         ". a";
       gap: 20px 100px;
-      grid-template-rows: repeat(5, 1fr);
-      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(5, auto);
+      grid-template-columns: 1fr 2fr;
 
       .image-container {
         grid-area: a;
