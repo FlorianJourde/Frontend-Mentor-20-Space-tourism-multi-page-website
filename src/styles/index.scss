@@ -50,6 +50,7 @@ body {
   background-size: cover;
   background-image: var(--img-background-image);
   overflow-x: hidden;
+  word-break: break-word;
 }
 
 a, input, button {
@@ -60,6 +61,10 @@ button {
   border: none;
   background-color: unset;
   cursor: pointer;
+}
+
+p {
+  line-height: 2em;
 }
 
 input, button, textarea, select {

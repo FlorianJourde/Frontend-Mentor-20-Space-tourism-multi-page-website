@@ -78,6 +78,7 @@
     text-transform: uppercase;
     font-size: var(--fs-heading-5);
     letter-spacing: .2em;
+    flex-direction: column;
 
     .label {
       color: var(--clr-transparent-white);
@@ -87,6 +88,15 @@
       font-family: var(--ff-tertiary);
       font-size: var(--fs-heading-4);
       margin-top: 10px;
+      line-height: 1em;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .destination-section {
+    .specs {
+      flex-direction: unset;
     }
   }
 }
