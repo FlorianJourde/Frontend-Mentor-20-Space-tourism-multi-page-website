@@ -59,7 +59,7 @@
       "b d"
       "c d";
       grid-template-columns: 1fr 300px;
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
       gap: 50px 200px;
 
       h2 {
