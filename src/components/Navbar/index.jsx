@@ -1,6 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 import '../../styles/Navbar.scss';
 import logo from '../../assets/shared/logo.svg';
+import burgerIcon from '../../assets/shared/icon-hamburger.svg';
+import closeIcon from '../../assets/shared/icon-close.svg';
 import { useState } from "react";
 
 function Navbar({ baseUrl }) {
@@ -16,11 +18,11 @@ function Navbar({ baseUrl }) {
         <img src={logo} alt="" />
       </Link>
       <button className={'toggle-menu open'} onClick={handleToggleMenu}>
-        <img src="../../assets/shared/icon-hamburger.svg" alt="" />
+        <img src={burgerIcon} alt="" />
       </button>
       <div className={toggleMenu === true ? 'navigation active' : 'navigation'}>
         <button className={'toggle-menu close'} onClick={handleToggleMenu}>
-          <img src="../../assets/shared/icon-close.svg" alt="" />
+          <img src={closeIcon} alt="" />
         </button>
         <ul>
           <li><NavLink className={({ isActive }) => (isActive && 'active')} exact to={baseUrl}><span className={'number'}>00</span> Home</NavLink></li>
