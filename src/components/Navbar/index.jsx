@@ -24,7 +24,7 @@ function Navbar({ baseUrl }) {
         </button>
         <ul>
           <li><NavLink className={({ isActive }) => (isActive && 'active')} exact to={baseUrl}><span className={'number'}>00</span> Home</NavLink></li>
-          <li><NavLink className={({ isActive }) => (isActive && 'active')} to={baseUrl + "/destination"}><span className={'number'}>01</span> Destination</NavLink></li>
+          <li><NavLink className={({ isActive }) => (isActive && 'active')} to={baseUrl + "destination"}><span className={'number'}>01</span> Destination</NavLink></li>
           <li><NavLink className={({ isActive }) => (isActive && 'active')} to={baseUrl + "crew"}><span className={'number'}>02</span> Crew</NavLink></li>
           <li><NavLink className={({ isActive }) => (isActive && 'active')} to={baseUrl + "technology"}><span className={'number'}>03</span> Technology</NavLink></li>
         </ul>
