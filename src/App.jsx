@@ -5,20 +5,20 @@ import Destination from "./pages/Destination";
 import Crew from "./pages/Crew";
 import Technology from "./pages/Technology";
 import "./styles/index.scss";
-import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 
 function App() {
+  const baseUrl = import.meta.env.BASE_URL;
+
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
+        <Navbar baseUrl={baseUrl} />
 
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/destination" component={Destination} />
-          <Route path="/crew" component={Crew} />
-          <Route path="/technology" component={Technology} />
-          <Redirect to="/" />
+          <Route exact path={baseUrl} component={Home} />
+          <Route path={baseUrl + "destination"} component={Destination} />
+          <Route path={baseUrl + "crew"} component={Crew} />
+          <Route path={baseUrl + "technology"} component={Technology} />
         </Switch>
 
       </BrowserRouter>
