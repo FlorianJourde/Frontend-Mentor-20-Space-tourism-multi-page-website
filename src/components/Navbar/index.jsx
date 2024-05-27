@@ -4,6 +4,7 @@ import logo from '../../assets/shared/logo.svg';
 import burgerIcon from '../../assets/shared/icon-hamburger.svg';
 import closeIcon from '../../assets/shared/icon-close.svg';
 import { useState } from "react";
+import styled from 'styled-components';
 
 function Navbar({ baseUrl }) {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -11,6 +12,15 @@ function Navbar({ baseUrl }) {
   const handleToggleMenu = () => {
     setToggleMenu(!toggleMenu);
   }
+
+  const ListElement = styled.li`
+    a {
+      padding: 25px 0;
+      position: relative;
+      display: inline-flex;
+      gap: 0 5px;
+    }
+  `
 
   return (
     <nav className={'main-navbar'}>
@@ -25,10 +35,10 @@ function Navbar({ baseUrl }) {
           <img src={closeIcon} alt="" />
         </button>
         <ul>
-          <li><NavLink className={({ isActive }) => (isActive && 'active')} exact to={baseUrl}><span className={'number'}>00</span> Home</NavLink></li>
-          <li><NavLink className={({ isActive }) => (isActive && 'active')} to={baseUrl + "destination"}><span className={'number'}>01</span> Destination</NavLink></li>
-          <li><NavLink className={({ isActive }) => (isActive && 'active')} to={baseUrl + "crew"}><span className={'number'}>02</span> Crew</NavLink></li>
-          <li><NavLink className={({ isActive }) => (isActive && 'active')} to={baseUrl + "technology"}><span className={'number'}>03</span> Technology</NavLink></li>
+          <ListElement><NavLink className={({ isActive }) => (isActive && 'active')} exact to={baseUrl}><span className={'number'}>00</span> Home</NavLink></ListElement>
+          <ListElement><NavLink className={({ isActive }) => (isActive && 'active')} to={baseUrl + "destination"}><span className={'number'}>01</span> Destination</NavLink></ListElement>
+          <ListElement><NavLink className={({ isActive }) => (isActive && 'active')} to={baseUrl + "crew"}><span className={'number'}>02</span> Crew</NavLink></ListElement>
+          <ListElement><NavLink className={({ isActive }) => (isActive && 'active')} to={baseUrl + "technology"}><span className={'number'}>03</span> Technology</NavLink></ListElement>
         </ul>
       </div>
     </nav>
