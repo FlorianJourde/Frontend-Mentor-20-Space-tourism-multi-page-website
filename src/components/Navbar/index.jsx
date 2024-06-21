@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import '../../styles/Navbar.scss';
-import './styles.module.css';
+import classes from './styles.module.css';
 import logo from '../../assets/shared/logo.svg';
 import burgerIcon from '../../assets/shared/icon-hamburger.svg';
 import closeIcon from '../../assets/shared/icon-close.svg';
@@ -25,7 +25,23 @@ function Navbar({ baseUrl }) {
         <button className={'toggle-menu close'} onClick={handleToggleMenu}>
           <img src={closeIcon} alt="" />
         </button>
-        <ul>
+
+        <ul className={classes.ul}>
+          <li>
+            <NavLink className={classes.a} exact to={baseUrl}><span className={'number'}>00</span> Home</NavLink>
+            </li>
+          <li>
+            <NavLink className={classes.a} to={baseUrl + "destination"}><span className={'number'}>01</span> Destination</NavLink>
+            </li>
+          <li>
+            <NavLink className={classes.a} to={baseUrl + "crew"}><span className={'number'}>02</span> Crew</NavLink>
+            </li>
+          <li>
+            <NavLink className={classes.a} to={baseUrl + "technology"}><span className={'number'}>03</span> Technology</NavLink>
+            </li>
+        </ul>
+
+        {/* <ul>
           <li>
             <NavLink className={({ isActive }) => (isActive && 'active')} exact to={baseUrl}><span className={'number'}>00</span> Home</NavLink>
             </li>
@@ -38,7 +54,8 @@ function Navbar({ baseUrl }) {
           <li>
             <NavLink className={({ isActive }) => (isActive && 'active')} to={baseUrl + "technology"}><span className={'number'}>03</span> Technology</NavLink>
             </li>
-        </ul>
+        </ul> */}
+
       </div>
     </nav>
   )
