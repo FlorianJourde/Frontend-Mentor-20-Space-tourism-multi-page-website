@@ -1,0 +1,12 @@
+@media (min-width: 769px)
+{
+
+    a
+    {
+        color: var(--clr-white);
+        padding: 25px 0;
+        position: relative;
+        display: inline-flex;
+        gap: 0 5px;
+    }
+}
