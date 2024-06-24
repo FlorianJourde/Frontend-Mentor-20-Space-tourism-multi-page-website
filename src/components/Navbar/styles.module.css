@@ -1,3 +1,15 @@
-ul {
-    outline: 1px solid tan !important;
+.navlinks
+{
+    flex-direction: unset !important;
+    padding: 0 40px !important;
+    gap: 40px !important;
+}
+
+.navlink
+{
+    color: var(--clr-white);
+    padding: 25px 0;
+    position: relative;
+    display: inline-flex;
+    gap: 0 5px;
 }

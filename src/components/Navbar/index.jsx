@@ -26,18 +26,18 @@ function Navbar({ baseUrl }) {
           <img src={closeIcon} alt="" />
         </button>
 
-        <ul className={classes.ul}>
+        <ul className={classes.navlinks}>
           <li>
-            <NavLink className={classes.a} exact to={baseUrl}><span className={'number'}>00</span> Home</NavLink>
+            <NavLink className={classes.navlink} exact to={baseUrl}><span className={'number'}>00</span> Home</NavLink>
             </li>
           <li>
-            <NavLink className={classes.a} to={baseUrl + "destination"}><span className={'number'}>01</span> Destination</NavLink>
+            <NavLink className={classes.navlink} to={baseUrl + "destination"}><span className={'number'}>01</span> Destination</NavLink>
             </li>
           <li>
-            <NavLink className={classes.a} to={baseUrl + "crew"}><span className={'number'}>02</span> Crew</NavLink>
+            <NavLink className={classes.navlink} to={baseUrl + "crew"}><span className={'number'}>02</span> Crew</NavLink>
             </li>
           <li>
-            <NavLink className={classes.a} to={baseUrl + "technology"}><span className={'number'}>03</span> Technology</NavLink>
+            <NavLink className={classes.navlink} to={baseUrl + "technology"}><span className={'number'}>03</span> Technology</NavLink>
             </li>
         </ul>
 

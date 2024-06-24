@@ -90,16 +90,16 @@
       width: unset;
 
       ul {
-        flex-direction: unset;
-        padding: 0 40px;
-        gap: 40px;
+        // flex-direction: unset;
+        // padding: 0 40px;
+        // gap: 40px;
 
         li a {
-          color: var(--clr-white);
-          padding: 25px 0;
-          position: relative;
-          display: inline-flex;
-          gap: 0 5px;
+          // color: var(--clr-white);
+          // padding: 25px 0;
+          // position: relative;
+          // display: inline-flex;
+          // gap: 0 5px;
 
           &::after {
             content: "";
