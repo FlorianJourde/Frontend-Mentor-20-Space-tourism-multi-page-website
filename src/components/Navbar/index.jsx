@@ -4,6 +4,7 @@ import logo from '../../assets/shared/logo.svg';
 import burgerIcon from '../../assets/shared/icon-hamburger.svg';
 import closeIcon from '../../assets/shared/icon-close.svg';
 import { useState } from "react";
+import styled from '@emotion/styled'
 
 function Navbar({ baseUrl }) {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -11,6 +12,19 @@ function Navbar({ baseUrl }) {
   const handleToggleMenu = () => {
     setToggleMenu(!toggleMenu);
   }
+
+  const UnorderedList = styled.ul`
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+      gap: 30px;
+      height: 100%;
+      justify-content: center;
+      font-family: var(--ff-secondary);
+      text-transform: uppercase;
+      letter-spacing: .2em;
+`
 
   return (
     <nav className={'main-navbar'}>
@@ -24,12 +38,12 @@ function Navbar({ baseUrl }) {
         <button className={'toggle-menu close'} onClick={handleToggleMenu}>
           <img src={closeIcon} alt="" />
         </button>
-        <ul>
+        <UnorderedList>
           <li><NavLink className={({ isActive }) => (isActive && 'active')} exact to={baseUrl}><span className={'number'}>00</span> Home</NavLink></li>
           <li><NavLink className={({ isActive }) => (isActive && 'active')} to={baseUrl + "destination"}><span className={'number'}>01</span> Destination</NavLink></li>
           <li><NavLink className={({ isActive }) => (isActive && 'active')} to={baseUrl + "crew"}><span className={'number'}>02</span> Crew</NavLink></li>
           <li><NavLink className={({ isActive }) => (isActive && 'active')} to={baseUrl + "technology"}><span className={'number'}>03</span> Technology</NavLink></li>
-        </ul>
+        </UnorderedList>
       </div>
     </nav>
   )
