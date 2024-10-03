@@ -5,6 +5,9 @@ import Destination from "./pages/Destination";
 import Crew from "./pages/Crew";
 import Technology from "./pages/Technology";
 import "./styles/index.scss";
+import withAllComponents from "./utils/withAllComponents";
+import withClassName from "./utils/withComponentClass";
+// import withAllComponents from "./utils/withAllComponentClass";
 
 function App() {
   const baseUrl = import.meta.env.BASE_URL;
@@ -27,3 +30,5 @@ function App() {
 }
 
 export default App
+// export default withClassName(App)
+// export default withAllComponents(App);
