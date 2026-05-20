@@ -3,7 +3,8 @@ import "../../styles/Home.scss";
 import setBackground from "../../utils/setBackground";
 
 function Home() {
-  setBackground( 'home');
+  const baseUrl = import.meta.env.BASE_URL;
+  setBackground('home');
 
   return  (
     <section className={'home-section padding-top-medium padding-bottom-medium'}>
@@ -14,7 +15,7 @@ function Home() {
           <p>Let’s face it; if you want to go to space, you might as well genuinely go to
             outer space and not hover kind of on the edge of it. Well sit back, and relax
             because we’ll give you a truly out of this world experience!</p>
-          <Link to="/destination">
+          <Link to={baseUrl + "destination"}>
             Explore
           </Link>
         </div>
